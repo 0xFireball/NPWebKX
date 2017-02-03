@@ -6,7 +6,8 @@
   "version": "0.1.0-*",
 
   "dependencies": {
-    "NETStandard.Library": "1.6.0"
+    "IridiumJS": "2.10.3",
+    "NETStandard.Library": "1.6.1"
   },
 
   "frameworks": {
