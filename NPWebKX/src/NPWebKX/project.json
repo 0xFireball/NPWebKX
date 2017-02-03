@@ -1,0 +1,17 @@
+{
+  "title": "NPWebKX",
+  "copyright": "Copyright © 2016 0xFireball (Nihal Talur), IridiumIon Software. All Rights Reserved.",
+  "description": "NPWebKX Project",
+  "language": "en",
+  "version": "0.1.0-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
