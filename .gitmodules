@@ -1,0 +1,3 @@
+[submodule "Libraries/jsdom"]
+	path = Libraries/jsdom
+	url = https://github.com/0xFireball/jsdom.git
