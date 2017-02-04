@@ -1,4 +1,5 @@
 ﻿using NPWebKX.JS;
+using NPWebKX.JSDom;
 
 namespace NPWebKX.Demo.Hello
 {
@@ -6,7 +7,8 @@ namespace NPWebKX.Demo.Hello
     {
         public static void Main(string[] args)
         {
-            var jsdomscript = JSDomLoader.LoadJSDomScriptSource();
+            var jd = new JSDomApi();
+            var document = jd.CreateDocument();
         }
     }
 }
