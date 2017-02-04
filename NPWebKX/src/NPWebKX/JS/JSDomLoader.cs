@@ -7,7 +7,7 @@ namespace NPWebKX.JS
     {
         public static Stream LoadJSDomScriptStream()
         {
-            return typeof(JSDomLoader).GetTypeInfo().Assembly.GetManifestResourceStream("JS.jsdom_nkx.min.js");
+            return typeof(JSDomLoader).GetTypeInfo().Assembly.GetManifestResourceStream("NPWebKX.JS.jsdom_nkx.min.js");
         }
 
         public static string LoadJSDomScriptSource()

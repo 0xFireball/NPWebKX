@@ -7,7 +7,6 @@ namespace NPWebKX.Demo.Hello
         public static void Main(string[] args)
         {
             var jsdomscript = JSDomLoader.LoadJSDomScriptSource();
-
         }
     }
 }
