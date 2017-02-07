@@ -5,6 +5,10 @@ namespace NPWebKX.JS
 {
     public class JSDomLoader
     {
+        public static Stream LoadUi8PScriptStream()
+        {
+            return typeof(JSDomLoader).GetTypeInfo().Assembly.GetManifestResourceStream("NPWebKX.JS.ui8p_pack.js");
+        }
         public static Stream LoadJSDomScriptStream()
         {
             return typeof(JSDomLoader).GetTypeInfo().Assembly.GetManifestResourceStream("NPWebKX.JS.jsdom_nkx.min.js");
@@ -12,11 +16,15 @@ namespace NPWebKX.JS
 
         public static string LoadJSDomScriptSource()
         {
-            string result;
+            string result = string.Empty;
             using (var sr = new StreamReader(LoadJSDomScriptStream()))
             {
                 result = sr.ReadToEnd();
             }
+            using (var sr = new StreamReader(LoadUi8PScriptStream()))
+            {
+                result = sr.ReadToEnd();
+            }            
             return result;
         }
     }

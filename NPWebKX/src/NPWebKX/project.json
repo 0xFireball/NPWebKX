@@ -18,7 +18,7 @@
 
   "buildOptions": {
     "embed": [
-      "JS/jsdom_nkx.min.js"
+      "JS/*.js"
     ]
   }
 }
