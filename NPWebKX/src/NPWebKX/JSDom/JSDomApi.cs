@@ -1,4 +1,5 @@
-﻿using IridiumJS;
+﻿using System;
+using IridiumJS;
 using NPWebKX.JS;
 
 namespace NPWebKX.JSDom
@@ -9,9 +10,15 @@ namespace NPWebKX.JSDom
 
         public JSDomApi()
         {
+            _jsEngine.SetValue("setGlobal", new Action<string, object>(SetGlobal));
             _jsEngine.Execute(JSDomLoader.LoadJSDomScriptDeps());
-            var xx =_jsEngine.VariableContext.Uint8Array;
+            var xx = _jsEngine.GetValue("Uint8Array");
             _jsEngine.Execute(JSDomLoader.LoadJSDomScriptSource());
+        }
+
+        public void SetGlobal(string n, object x)
+        {
+            _jsEngine.SetValue(n, x);
         }
 
         public dynamic CreateDocument()
