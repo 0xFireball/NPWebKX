@@ -9,6 +9,8 @@ namespace NPWebKX.JSDom
 
         public JSDomApi()
         {
+            _jsEngine.Execute(JSDomLoader.LoadJSDomScriptDeps());
+            var xx =_jsEngine.VariableContext.Uint8Array;
             _jsEngine.Execute(JSDomLoader.LoadJSDomScriptSource());
         }
 
